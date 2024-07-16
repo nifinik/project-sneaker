@@ -1,17 +1,22 @@
-const Card = () => {
+import styles from "./Card.module.scss";
+
+const Card = ({ imageUrl, name, price }) => {
+  const onClickBtn = () => {
+    alert(name);
+  };
   return (
-    <div className="card">
-      <div className="favorite">
+    <div className={styles.card}>
+      <div className={styles.favorite}>
         <img src="/img/heart-default.svg" alt="btn-plus" />
       </div>
-      <img width={133} height={112} src="/img/sneakers/1.jpg" alt="" />
-      <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-      <div className="cardBottom">
-        <div className="cardBottom-text">
+      <img width={133} height={112} src={imageUrl} alt="" />
+      <h5>{name}</h5>
+      <div className={styles.cardBottom}>
+        <div className={styles.cardBottom_text}>
           <span>Цена: </span>
-          <b>12 999 тг.</b>
+          <b>{price} тг.</b>
         </div>
-        <button className="button">
+        <button className={styles.button} onClick={onClickBtn}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
