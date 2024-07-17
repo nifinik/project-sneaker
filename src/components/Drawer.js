@@ -1,37 +1,32 @@
-const Drawer = () => {
+const Drawer = ({ onClose, items = [] }) => {
   return (
-    <div style={{ display: "none" }} className="overlay">
+    <div className="overlay">
       <div className="drawer">
         <h2>
-          Корзина <img className="removeBtn" src="/img/btn-remove.svg" alt="" />
+          Корзина{" "}
+          <img
+            onClick={onClose}
+            className="removeBtn"
+            src="/img/btn-remove.svg"
+            alt=""
+          />
         </h2>
         <div className="drawer-items">
-          <div className="cartItem">
-            <img
-              width={70}
-              height={70}
-              src="/img/sneakers/1.jpg"
-              alt="sneakers1"
-            />
-            <div className="cartItem-text">
-              <p>Мужские Кроссовки Nike Air Max 270</p>
-              <b>12 999 тг</b>
+          {items.map((obj) => (
+            <div className="cartItem">
+              <img
+                width={70}
+                height={70}
+                src={`${obj.imageUrl}`}
+                alt="sneakers1"
+              />
+              <div className="cartItem-text">
+                <p>Мужские Кроссовки Nike Air Max 270</p>
+                <b>12 999 тг</b>
+              </div>
+              <img className="removeBtn" src="/img/btn-remove.svg" alt="" />
             </div>
-            <img className="removeBtn" src="/img/btn-remove.svg" alt="" />
-          </div>
-          <div className="cartItem">
-            <img
-              width={70}
-              height={70}
-              src="/img/sneakers/1.jpg"
-              alt="sneakers1"
-            />
-            <div className="cartItem-text">
-              <p>Мужские Кроссовки Nike Air Max 270</p>
-              <b>12 999 тг</b>
-            </div>
-            <img className="removeBtn" src="/img/btn-remove.svg" alt="" />
-          </div>
+          ))}
         </div>
         <div className="cartTotalBlock">
           <ul>

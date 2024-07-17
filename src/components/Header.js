@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({ onClickCart }) => {
   return (
     <header>
       <div className="headerLeft">
@@ -9,7 +9,7 @@ const Header = () => {
         </div>
       </div>
       <div className="headerRight">
-        <div className="headerRight-left">
+        <div onClick={onClickCart} className="headerRight-left">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

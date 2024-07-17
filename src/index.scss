@@ -47,6 +47,7 @@ header {
       display: flex;
       align-items: center;
       gap: 8px;
+      cursor: pointer;
     }
 
     div {
@@ -72,8 +73,9 @@ header {
   }
 
   &-sneakers {
-    display: flex;
+    display: grid;
     gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 }
 

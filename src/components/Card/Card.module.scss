@@ -1,7 +1,6 @@
 .card {
   border: 1px solid #d4d4d4;
   padding: 16px;
-  width: 210px;
   border-radius: 16px;
   transition: border 0.3s ease-in-out, transform 0.3s ease-in-out;
   cursor: pointer;
@@ -9,6 +8,10 @@
   &:hover {
     border: 1px solid #4e6eff;
     transform: translateY(-5px);
+  }
+
+  .plus {
+    cursor: pointer;
   }
 
   .favorite {
@@ -30,12 +33,4 @@
       flex-direction: column;
     }
   }
-}
-
-.button {
-  background: #ffffff;
-  border: 1px solid #d4d4d4;
-  box-sizing: border-box;
-  border-radius: 8px;
-  cursor: pointer;
 }
