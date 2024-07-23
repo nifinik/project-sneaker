@@ -7,7 +7,7 @@ const Drawer = ({ onClose, items = [] }) => {
           <img
             onClick={onClose}
             className="removeBtn"
-            src="/img/btn-remove.svg"
+            src={`${process.env.PUBLIC_URL}/img/btn-remove.svg`}
             alt=""
           />
         </h2>
@@ -24,7 +24,11 @@ const Drawer = ({ onClose, items = [] }) => {
                 <p>Мужские Кроссовки Nike Air Max 270</p>
                 <b>12 999 тг</b>
               </div>
-              <img className="removeBtn" src="/img/btn-remove.svg" alt="" />
+              <img
+                className="removeBtn"
+                src={`${process.env.PUBLIC_URL}/img/btn-remove.svg`}
+                alt=""
+              />
             </div>
           ))}
         </div>

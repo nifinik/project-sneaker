@@ -11,7 +11,10 @@ const Card = ({ imageUrl, name, price, onClickFavorite, onPlus }) => {
   return (
     <div className={styles.card}>
       <div className={styles.favorite} onClick={onClickFavorite}>
-        <img src="/img/heart-default.svg" alt="btn-plus" />
+        <img
+          src={`${process.env.PUBLIC_URL}/img/heart-default.svg`}
+          alt="btn-plus"
+        />
       </div>
       <img width={133} height={112} src={imageUrl} alt="" />
       <h5>{name}</h5>
@@ -23,7 +26,11 @@ const Card = ({ imageUrl, name, price, onClickFavorite, onPlus }) => {
         <img
           className={styles.plus}
           onClick={onClickPlus}
-          src={isAdded ? "/img/btn-success.svg" : "/img/btn-plus.svg"}
+          src={
+            isAdded
+              ? `${process.env.PUBLIC_URL}/img/btn-success.svg`
+              : `${process.env.PUBLIC_URL}/img/btn-plus.svg`
+          }
           alt=""
         />
       </div>

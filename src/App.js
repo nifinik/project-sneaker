@@ -55,7 +55,7 @@ function App() {
               <img
                 onClick={() => setSearchValue("")}
                 className="removeBtn clear"
-                src="/img/btn-remove.svg"
+                src={`${process.env.PUBLIC_URL}/img/btn-remove.svg`}
                 alt=""
               />
             )}
