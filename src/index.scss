@@ -93,6 +93,15 @@ header {
   align-items: center;
   padding: 0 16px;
   border-radius: 10px;
+  position: relative;
+
+  .clear {
+    width: 24px;
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    cursor: pointer;
+  }
 
   input {
     border: 0;
