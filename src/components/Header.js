@@ -2,7 +2,12 @@ const Header = ({ onClickCart }) => {
   return (
     <header>
       <div className="headerLeft">
-        <img width={40} height={40} src="/img/logo.png" alt="" />
+        <img
+          width={40}
+          height={40}
+          src={`${process.env.PUBLIC_URL}/img/logo.png`}
+          alt=""
+        />
         <div className="headerInfo">
           <h3>REACT SNEAKERS</h3>
           <p>Магазин лучших кроссовок</p>

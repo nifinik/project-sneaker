@@ -16,7 +16,13 @@ const Card = ({ imageUrl, name, price, onClickFavorite, onPlus }) => {
           alt="btn-plus"
         />
       </div>
-      <img width={133} height={112} src={imageUrl} alt="" />
+      <img
+        className={styles.card_img}
+        width={133}
+        height={112}
+        src={imageUrl}
+        alt=""
+      />
       <h5>{name}</h5>
       <div className={styles.cardBottom}>
         <div className={styles.cardBottom_text}>
